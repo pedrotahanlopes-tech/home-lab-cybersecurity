@@ -2,153 +2,145 @@
 
 Autor: Pedro Tarram
 Usuário do Kali: pedrotec
-Projeto: Construção de Ambiente de Laboratório para Estudos de Segurança da Informação
+Projeto: Criação de Ambiente de Laboratório para Prática de Segurança da Informação
 
 1. Introdução
 
-O presente documento tem como objetivo registrar de maneira formal e estruturada a criação do meu primeiro Laboratório de Segurança da Informação, configurado em ambiente virtualizado por meio do VirtualBox.
-Este laboratório é destinado à prática de fundamentos de Cybersecurity, testes controlados, varredura de portas, análise de serviços, documentação de procedimentos e desenvolvimento de habilidades técnicas essenciais para atuação na área.
+Este documento registra, de forma técnica e objetiva, os procedimentos realizados para a construção do meu primeiro laboratório de Segurança da Informação.
+O ambiente foi estruturado utilizando o VirtualBox e o sistema operacional Kali Linux, visando permitir práticas seguras relacionadas a análise de redes, varredura de portas, identificação de serviços e desenvolvimento de habilidades fundamentais em Cybersecurity.
+A execução ocorreu inteiramente em ambiente isolado, sem risco para o sistema operacional principal.
 
-Toda a execução ocorreu em ambiente isolado, garantindo segurança ao sistema operacional principal.
+2. Objetivo Geral
 
-2. Objetivo Geral do Laboratório
+O objetivo deste laboratório é:
 
-O laboratório foi projetado para:
+Criar um ambiente controlado para estudo e prática de Segurança da Informação;
 
-Proporcionar um ambiente controlado para estudos de Segurança da Informação;
+Simular cenários básicos enfrentados por analistas de segurança;
 
-Permitir o uso de ferramentas de análise e testes ofensivos/defensivos;
+Praticar o uso de ferramentas essenciais, como Nmap;
 
-Simular cenários reais de atuação profissional;
+Desenvolver autonomia em Linux e compreensão de redes;
 
-Criar o hábito de documentação formal e técnica;
-
-Desenvolver autonomia operacional em Linux e redes.
+Documentar o processo de forma estruturada e profissional.
 
 3. Instalação do VirtualBox
-3.1 Objetivo
+Objetivo
 
-Instalar o hypervisor responsável pela criação e gerenciamento de máquinas virtuais.
+Instalar o hypervisor responsável por gerenciar máquinas virtuais.
 
-3.2 Procedimentos executados
+Procedimentos
 
-Acesso ao site oficial: https://www.virtualbox.org/wiki/Downloads
+Acessei o endereço oficial: https://www.virtualbox.org/wiki/Downloads
 
-Download da versão Windows Hosts;
+Realizei o download da versão “Windows Hosts”;
 
-Execução do instalador com as etapas padrão do assistente:
-Next → Next → Yes → Install → Finish.
+Executei o instalador e concluí o processo com as configurações padrão
+(Next → Next → Yes → Install → Finish).
 
-3.3 Observação técnica
+Observação
 
-O VirtualBox oferece isolamento completo entre o sistema real e os ambientes de teste, permitindo experimentação segura de ferramentas de segurança.
+A utilização do VirtualBox permite a criação de ambientes isolados necessários para treinamento prático em segurança, evitando qualquer comprometimento ao sistema real.
 
 4. Download da ISO do Kali Linux
-4.1 Objetivo
+Objetivo
 
-Obter a imagem oficial do sistema operacional Kali Linux, amplamente utilizado em testes de segurança.
+Obter a imagem oficial utilizada para instalação do Kali Linux.
 
-4.2 Procedimentos executados
+Procedimentos
 
-Acesso ao site oficial: https://www.kali.org/get-kali/
+Acessei: https://www.kali.org/get-kali/
 
-Seleção da opção Installer – 64-bit;
+Realizei o download da versão Installer – 64-bit;
 
-Download da imagem no formato .iso.
+Arquivo obtido no formato .iso.
 
-4.3 Observação técnica
+Observação
 
-A utilização da fonte oficial assegura a integridade da imagem, reduzindo riscos de adulteração.
+A imagem foi baixada exclusivamente do site oficial para garantir integridade e autenticidade.
 
-5. Criação da Máquina Virtual do Kali Linux
-5.1 Objetivo
+5. Criação da Máquina Virtual
+Objetivo
 
-Configurar a estrutura virtual necessária para instalação do Kali Linux.
+Configurar a máquina virtual onde o Kali Linux seria instalado.
 
-5.2 Configurações definidas
+Configurações adotadas
 
-Informações gerais:
+Nome: Kali Linux
 
-Nome da VM: Kali Linux;
+Sistema: Linux
 
-Sistema: Linux;
+Distribuição: Debian (64-bit)
 
-Distribuição: Debian (64-bit).
+Memória RAM: 4 GB
 
-Hardware Virtual:
+Disco virtual: 30 GB (dinamicamente alocado)
 
-Memória RAM: 4 GB;
+Tipo de disco: VDI
 
-Disco virtual: 30 GB (dinamicamente alocado);
+Justificativa técnica
 
-Tipo de arquivo: VDI.
-
-5.3 Justificativa técnica
-
-A distribuição Debian foi selecionada devido ao fato de o Kali Linux ser baseado nesta mesma arquitetura, garantindo maior compatibilidade durante a instalação.
+Como o Kali Linux é baseado no Debian, a seleção da distribuição Debian (64-bit) garante maior compatibilidade com o kernel durante a instalação.
 
 6. Instalação do Kali Linux
-6.1 Objetivo
+Objetivo
 
-Instalar o sistema operacional Kali Linux dentro da máquina virtual criada.
+Realizar a instalação completa do Kali Linux dentro da máquina virtual criada.
 
-6.2 Procedimentos executados
+Procedimentos executados
 
-Início da VM com a imagem .iso selecionada;
+Inicializei a VM selecionando a ISO do Kali.
 
-Opção escolhida: Graphical Install;
+Escolhi a opção Graphical Install.
 
-Configurações iniciais:
+Realizei as configurações iniciais:
 
-Idioma: Português (Brasil);
+Idioma: Português (Brasil)
 
-País: Brasil;
+Região: Brasil
 
-Layout do teclado: Português (Brasil).
+Teclado: Português (Brasil)
 
 Configuração de rede:
 
-Hostname: kali;
+Hostname: kali
 
-Domínio: deixado em branco.
+Domínio: deixado em branco
 
 Criação do usuário:
 
-Nome completo: Pedro Tarram;
+Nome completo: Pedro Tarram
 
-Nome de login: pedrotec;
+Nome de login: pedrotec
 
-Senha definida durante a instalação.
+Senha definida durante o processo
 
-Seleção do fuso horário: São Paulo.
+Selecionei o fuso horário: São Paulo.
 
-Particionamento de disco:
+Particionamento do disco:
 
-Método: Guiado – usar o disco inteiro;
+Método: Guiado – usar o disco inteiro
 
-Layout: todos os arquivos em uma única partição;
+Layout: uma única partição para todos os arquivos
 
-Confirmação: gravação das alterações no disco.
+Confirmei a gravação das alterações
 
-Instalação do gerenciador de boot (GRUB) no disco /dev/sda.
+Instalei o GRUB no disco principal (/dev/sda).
 
-6.3 Observação técnica
+Observação
 
-O GRUB é necessário para inicialização do sistema. Sem sua instalação, a máquina virtual não consegue iniciar corretamente.
+O GRUB é fundamental para o processo de inicialização da máquina virtual, sendo indispensável para o correto funcionamento do sistema.
 
-7. Primeiro Login no Sistema
-7.1 Procedimentos executados
+7. Primeiro Login
 
-Reinicialização automática ao final da instalação;
+Após a conclusão da instalação e reinicialização automática:
 
-Acesso à tela de login;
+Acessei a tela de login;
 
-Inserção das credenciais:
+Informei o usuário pedrotec e a senha configurada;
 
-Usuário: pedrotec;
+O ambiente gráfico foi carregado com sucesso.
 
-Senha configurada previamente.
+Observação
 
-7.2 Observação técnica
-
-O Linux oculta senhas durante a digitação por motivos de segurança, não exibindo caracteres no terminal ou na interface.
+O comportamento de não exibir caracteres ao digitar a senha é padrão em sistemas Linux, por motivo de segurança.
