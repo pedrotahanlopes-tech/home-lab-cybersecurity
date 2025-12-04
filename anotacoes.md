@@ -149,3 +149,29 @@ relatorios/relatorio-nmap-inicial.md
 
 
 Essa é a base do meu laboratório, a partir daqui, posso começar a expandir o ambiente com novas etapas.
+
+8. Aprendizados Obtidos nesta Etapa
+
+Durante a construção desta primeira parte do laboratório, aprendi conceitos importantes que são base para qualquer profissional de Segurança da Informação:
+
+A importância de trabalhar em ambiente isolado (VM) para evitar riscos
+
+Como instalar e configurar um sistema Linux voltado para segurança
+
+O uso correto do terminal para atualizar pacotes e gerenciar o sistema
+
+Como identificar o endereço IP e interpretar interfaces de rede
+
+O funcionamento básico do Nmap e o significado de portas fechadas
+
+Como interpretar mensagens como reset, closed e host is up
+
+como documentar evidências de forma organizada para relatórios técnicos
+
+que uma instalação limpa geralmente não tem serviços em escuta — isso reduz a superfície de ataque
+
+que prints organizados ajudam na clareza e comprovação técnica
+
+como estruturar um repositório profissional no GitHub para estudos
+
+Esse conjunto de aprendizados criou a base para que eu avance para análises mais profundas ao longo do laboratório.
