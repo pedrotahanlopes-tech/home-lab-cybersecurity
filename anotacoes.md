@@ -168,7 +168,7 @@ Como interpretar mensagens como reset, closed e host is up
 
 como documentar evidências de forma organizada para relatórios técnicos
 
-que uma instalação limpa geralmente não tem serviços em escuta — isso reduz a superfície de ataque
+que uma instalação limpa geralmente não tem serviços em escuta isso reduz a superfície de ataque
 
 que prints organizados ajudam na clareza e comprovação técnica
 
